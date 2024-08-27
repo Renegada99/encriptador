@@ -13,20 +13,9 @@
         <img class="encabezado_logo" src="img/logo-alura.png" alt="Logo de Alura">
     </header>
     <main class="encriptador">
-        <section class="encriptador_texto_entrada">
-            <textarea class="texto_entrada_campo" cols="30" rows="10" placeholder="Ingrese un texto aquí"></textarea>
-            <div class="encriptador_informacion">
-                <img src="img/icono-admiracion.png" alt="icono de información">
-                <p class="encriptador_recomendacion">Solo letras minúsculas y sin acento.</p>
-            </div>
-            <div class="encriptador_botones">
-                <button class="boton_encriptar">Encriptar</button>
-                <button class="boton_desencriptar">Desencriptar</button>
-            </div>
-        </section>
         <section class="texto_salida">
             <div class="encriptador_botones">
-                <button class="copiar" type="button">Copiar</button>
+                <button class="copiar" type="button" onclick=copiar_redirigir();>Copiar</button>
             </div>
             <textarea class="texto_salida_campo" cols="30" rows="10"></textarea>
             <h5 class="encriptador_mensaje">Nuevo Mensaje</h5>

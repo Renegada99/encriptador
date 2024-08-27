@@ -85,5 +85,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+function copiar_redirigir() {
+    // Obtén el área de texto y el contenido
+    const textarea = document.querySelector('.texto_salida_campo');
+
+    // Selecciona el texto del área de texto
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+    // Copia el texto al portapapeles
+    try {
+        const exitoso = document.execCommand('copy');
+        if (exitoso) {
+            alert('Mensaje copiado al portapapeles');
+        } else {
+            alert('No se pudo copiar el mensaje');
+        }
+    } catch (err) {
+        console.error('Error al copiar el mensaje: ', err);
+    }
+
+    // Redirige a la página index.html después de copiar
+    window.location.href = 'index.html';
+}
+
+
 
 console.table(matriz_codigo);
